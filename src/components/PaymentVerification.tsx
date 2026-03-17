@@ -41,7 +41,7 @@ export default function PaymentVerification({
 
   // Countdown timer effect
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setInterval>;
     if (isPollingPayment && countdown > 0) {
       timer = setInterval(() => {
         setCountdown((prev) => {
